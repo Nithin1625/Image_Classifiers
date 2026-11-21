@@ -1,0 +1,31 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.class
+*.env
+Backend/.env
+Backend/output/*.keras
+Backend/projects/
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Editor & OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Private datasets and generated models
+input/
+output/
+Backend/input/
+Backend/output/
+*.keras
+*.h5
+*.zip
+.env
+.env.*
+!.env.example

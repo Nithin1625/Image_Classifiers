@@ -1,0 +1,255 @@
+.studio-shell {
+  --shell-ink: #f4f6ff;
+  --shell-muted: #aab5ce;
+  --shell-border: #ffffff20;
+  --shell-surface: #141d32;
+  min-height: 100svh;
+  background:
+    radial-gradient(ellipse at 78% 17%, #273365 0%, transparent 46%),
+    radial-gradient(ellipse at 19% 48%, #182d51 0%, transparent 54%),
+    #0c111f;
+}
+
+.studio-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 76px;
+  padding: 14px max(20px, calc((100vw - 1120px) / 2));
+  border-bottom: 1px solid var(--shell-border);
+  color: var(--shell-ink);
+}
+
+.studio-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+}
+
+.studio-mark {
+  display: grid;
+  place-items: center;
+  flex: 0 0 38px;
+  height: 38px;
+  border-radius: 12px;
+  color: #d9e4ff;
+  background: #334877;
+  border: 1px solid #839bff4a;
+}
+
+.studio-header button {
+  padding: 9px 13px;
+  border-radius: 9px;
+  color: var(--shell-muted);
+  font-size: 0.875rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.studio-header button:hover {
+  background: #ffffff12;
+  color: var(--shell-ink);
+}
+
+.studio-main {
+  width: min(100%, 1120px);
+  margin-inline: auto;
+  padding: 42px 20px 56px;
+}
+
+.studio-main--project {
+  padding-top: clamp(46px, 9vw, 112px);
+}
+
+.project-heading {
+  margin-bottom: clamp(25px, 4vw, 42px);
+}
+
+.project-heading h1 {
+  max-width: 17ch;
+  margin: 0;
+  color: var(--shell-ink);
+  font-size: clamp(2.3rem, 5.6vw, 4.65rem);
+  font-weight: 650;
+  line-height: 1.03;
+  letter-spacing: -0.065em;
+}
+
+.project-heading p {
+  margin-top: 16px;
+  color: var(--shell-muted);
+  font-size: clamp(0.96rem, 2vw, 1.12rem);
+}
+
+.project-options {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: clamp(18px, 3vw, 28px);
+  border: 1px solid var(--shell-border);
+  border-radius: 20px;
+  background: linear-gradient(150deg, #ffffff08, transparent), var(--shell-surface);
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.project-option--primary {
+  background: linear-gradient(155deg, #30416d, #19243f 72%);
+  border-color: #6f86bb85;
+}
+
+.project-option:focus-within,
+.project-option:hover {
+  border-color: #91aaffb3;
+}
+
+.project-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 22px;
+  color: #c2d3ff;
+  background: #a0b9ff19;
+  border: 1px solid #a0b9ff30;
+  border-radius: 13px;
+}
+
+.project-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.project-option > h2 {
+  color: var(--shell-ink);
+  font-size: 1.125rem;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+}
+
+.project-option > p {
+  margin: 7px 0 25px;
+  color: var(--shell-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.project-option .project-action {
+  width: 100%;
+  min-height: 44px;
+  margin-top: auto;
+  border: 1px solid #8198d263;
+  border-radius: 10px;
+  background: #ffffff0b;
+  color: var(--shell-ink);
+  white-space: normal;
+}
+
+.project-option .project-action:hover {
+  background: #ffffff19;
+}
+
+.project-option--primary .project-action {
+  color: #141e36;
+  background: #c9d7ff;
+}
+
+.project-option--primary .project-action:hover {
+  background: #e1e9ff;
+}
+
+.studio-shell :is(button, a):focus-visible {
+  outline-color: #8aa8ff;
+}
+
+.studio-workspace-card {
+  height: clamp(610px, calc(100svh - 172px), 860px);
+  border: 1px solid #dbe3f1;
+  border-radius: 22px;
+  box-shadow: 0 25px 70px #03081750;
+}
+
+.studio-stepper {
+  background: #f2f5fc;
+  border-color: #e0e7f4;
+}
+
+.drive-connect {
+  position: fixed;
+  inset: 0;
+  width: min(calc(100% - 32px), 440px);
+  margin: auto;
+  padding: 25px;
+  border: 1px solid #dae2f4;
+  border-radius: 20px;
+  background: white;
+  color: #17213b;
+  box-shadow: 0 20px 70px #070d284d;
+}
+
+.drive-connect::backdrop {
+  background: #060b1bbf;
+  backdrop-filter: blur(5px);
+}
+
+.drive-connect h2 {
+  margin-top: 12px;
+  font-size: 1.25rem;
+  font-weight: 650;
+}
+
+.drive-connect p {
+  margin: 8px 0 18px;
+}
+
+.drive-connect-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.drive-connect-actions p {
+  flex-basis: 100%;
+  order: -1;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .project-options {
+    grid-template-columns: 1fr;
+  }
+
+  .project-icon {
+    margin-bottom: 14px;
+  }
+
+  .project-option > p {
+    margin-bottom: 17px;
+  }
+
+  .studio-main--studio {
+    padding: 20px 10px;
+  }
+
+  .studio-workspace-card {
+    border-radius: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-option {
+    transition: none;
+  }
+}
+
